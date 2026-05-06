@@ -1,0 +1,16 @@
+# Core data manipulation
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Async HTTP for live re-evaluation against an OpenAI-compatible LLM endpoint
+aiohttp>=3.8.0
+aiofiles>=23.0.0
+nest_asyncio>=1.5.0
+tenacity>=8.0.0
+tqdm>=4.64.0
+
+# Plotting (only needed if you regenerate figures from the released runs/)
+matplotlib>=3.5.0
+
+# Environment loading
+python-dotenv>=1.0.0
