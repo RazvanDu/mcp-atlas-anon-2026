@@ -57,7 +57,13 @@ pip install -r requirements.txt
 python smoke/smoke_test.py
 ```
 
-Replays cached scores against per-task coverage scores. Exits in <30s.
+Runs four offline checks: sample CSV parses with the expected schema,
+claims schema is valid JSON-Schema with the 0.75 pass threshold, the
+failure taxonomy module exposes the 11 modes (4 tool-call + 7
+cognitive), and every harness script compiles. If a full `runs/` tree
+is also present as a sibling, an additional optional check verifies
+each model's per-task coverage scores reproduce the canonical pass
+rate within 0.15 pp. Exits in <5s offline.
 
 ## Re-score against the claims evaluator (needs an LLM endpoint)
 
